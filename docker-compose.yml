@@ -1,0 +1,16 @@
+version: '5.6'
+services:
+  Mysql:
+    container_name: mysql
+    image: mysql
+    ports:
+      - '3307:3306'
+    volumes:
+      - ../../databases/sql-data/db:/var/lib/mysql
+    hostname: localhost
+    environment:
+      MYSQL_DATABASE: 'bdmysql'
+      MYSQL_ROOT_PASSWORD: 'root'
+
+
+  
